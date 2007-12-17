@@ -15,7 +15,6 @@ Patch1:		Makefile.patch.bz2
 BuildRequires:  X11-devel
 Requires:	openssh-clients, rsh, gawk
 Provides:	%{name}-%{version}
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 Prefix:		%{_prefix}
 
 %description
