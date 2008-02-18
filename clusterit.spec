@@ -2,7 +2,7 @@
 %define	version 2.4
 %define release	%mkrel 1
 
-Summary:	Clusterit is a collection of clustering tools
+Summary:	Collection of clustering tools
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
