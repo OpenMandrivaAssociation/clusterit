@@ -1,6 +1,6 @@
 %define name	clusterit
 %define	version 2.4
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	Collection of clustering tools
 Name:		%{name}
