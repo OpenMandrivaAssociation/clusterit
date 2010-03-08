@@ -1,6 +1,6 @@
 %define name	clusterit
-%define	version 2.4
-%define release	%mkrel 5
+%define	version 2.5
+%define release	%mkrel 1
 
 Summary:	Collection of clustering tools
 Name:		%{name}
@@ -9,7 +9,7 @@ Release:	%{release}
 License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
-Source:		%{name}-%{version}.tar.bz2
+Source:		%{name}-%{version}.tar.gz
 Source1:	dshbak.sh
 Patch1:		Makefile.patch.bz2
 BuildRequires:  X11-devel
@@ -38,7 +38,7 @@ rm -rf ${buildroot}
 
 %build
 install -m644 %{SOURCE1} $RPM_BUILD_DIR/%{name}-%{version}/tools/dshbak.sh
-%configure
+%configure2_5x
 make
 
 %install
