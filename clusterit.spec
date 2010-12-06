@@ -1,11 +1,7 @@
-%define name	clusterit
-%define	version 2.5
-%define release	%mkrel 1
-
 Summary:	Collection of clustering tools
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		clusterit
+Version:	2.5
+Release:	%mkrel 2
 License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
@@ -32,21 +28,21 @@ of machines. rvt : a specialized VT100 emulator for the X window system.
 dvt : clustersed quickly dissect cluster files.
 
 %prep
-rm -rf ${buildroot}
 %setup -q
 #%patch1 -p0
 
 %build
-install -m644 %{SOURCE1} $RPM_BUILD_DIR/%{name}-%{version}/tools/dshbak.sh
+mkdir -p %{buildroot}/%{name}-%{version}/tools/
+install -m644 %{SOURCE1} %{buildroot}/%{name}-%{version}/tools/dshbak.sh
 %configure2_5x
-make
+%make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 
 %clean
-rm -fr %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root) 
