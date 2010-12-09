@@ -1,7 +1,7 @@
 Summary:	Collection of clustering tools
 Name:		clusterit
 Version:	2.5
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
