@@ -6,7 +6,6 @@ License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
-Source1:	dshbak.sh
 BuildRequires:  libx11-devel
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients, rsh, gawk
@@ -29,14 +28,12 @@ dvt : clustersed quickly dissect cluster files.
 %setup -q
 
 %build
-mkdir -p %{buildroot}/%{name}-%{version}/tools/
-install -m644 %{SOURCE1} %{buildroot}/%{name}-%{version}/tools/dshbak.sh
 %configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
@@ -46,4 +43,3 @@ rm -rf %{buildroot}
 %doc INSTALL CHANGES README html/*.html html/man/*.html
 %{_mandir}/man1/*
 %{_bindir}/*
-
