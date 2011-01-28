@@ -7,12 +7,12 @@ Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
 Source1:	dshbak.sh
-Patch1:		Makefile.patch.bz2
-BuildRequires:  X11-devel
+Patch1:		Makefile.patch
+BuildRequires:  libx11-devel
+BuildRequires:	ncurses-devel
 Requires:	openssh-clients, rsh, gawk
 Provides:	%{name}-%{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}
-Prefix:		%{_prefix}
 
 %description
 This is a collection of clustering tools, to turn your ordinary 
