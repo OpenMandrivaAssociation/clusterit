@@ -7,11 +7,9 @@ Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
 Source1:	dshbak.sh
-Patch1:		Makefile.patch
 BuildRequires:  libx11-devel
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients, rsh, gawk
-Provides:	%{name}-%{version}
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -29,7 +27,6 @@ dvt : clustersed quickly dissect cluster files.
 
 %prep
 %setup -q
-#%patch1 -p0
 
 %build
 mkdir -p %{buildroot}/%{name}-%{version}/tools/
