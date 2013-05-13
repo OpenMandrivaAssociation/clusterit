@@ -6,7 +6,7 @@ License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
-BuildRequires:  libx11-devel
+BuildRequires:  pkgconfig(x11)
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients, rsh, gawk
 BuildRoot:	%{_tmppath}/%{name}-%{version}
