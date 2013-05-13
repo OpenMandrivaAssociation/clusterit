@@ -1,7 +1,7 @@
 Summary:	Collection of clustering tools
 Name:		clusterit
 Version:	2.5
-Release:	%mkrel 3
+Release:	4
 License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
@@ -9,7 +9,6 @@ Source:		%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(x11)
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients, rsh, gawk
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This is a collection of clustering tools, to turn your ordinary 
