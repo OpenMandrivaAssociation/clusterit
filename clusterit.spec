@@ -1,14 +1,16 @@
 Summary:	Collection of clustering tools
 Name:		clusterit
 Version:	2.5
-Release:	4
+Release:	5
 License:	BSD
 Group:		Networking/Remote access
 URL:		http://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(x11)
 BuildRequires:	ncurses-devel
-Requires:	openssh-clients, rsh, gawk
+Requires:	openssh-clients
+Requires:	rsh-client
+Requires:	gawk
 
 %description
 This is a collection of clustering tools, to turn your ordinary 
@@ -31,14 +33,11 @@ dvt : clustersed quickly dissect cluster files.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root) 
 %doc INSTALL CHANGES README html/*.html html/man/*.html
 %{_mandir}/man1/*
 %{_bindir}/*
