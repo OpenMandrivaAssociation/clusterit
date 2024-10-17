@@ -6,7 +6,7 @@ Version:	2.5
 Release:	7
 License:	BSD
 Group:		Networking/Remote access
-URL:		http://clusterit.sourceforge.net/
+URL:		https://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(x11)
 BuildRequires:	ncurses-devel
