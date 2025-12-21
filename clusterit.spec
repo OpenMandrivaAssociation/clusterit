@@ -8,6 +8,11 @@ License:	BSD
 Group:		Networking/Remote access
 URL:		https://clusterit.sourceforge.net/
 Source:		%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(x11)
 BuildRequires:	ncurses-devel
 Requires:	openssh-clients
